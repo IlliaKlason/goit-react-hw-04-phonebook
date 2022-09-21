@@ -5,7 +5,9 @@ export function useHookLS(initial) {
     JSON.parse(localStorage.getItem(KEY)) ?? initial
   );
 
-  useEffect(() => localStorage.setItem(KEY, JSON.stringify(state)));
+  useEffect(() => {
+    localStorage.setItem(KEY, JSON.stringify(state));
+  }, [state]);
 
   return [state, setState];
 }
