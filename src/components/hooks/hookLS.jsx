@@ -12,13 +12,3 @@ export function useHookLS(initial) {
   return [state, setState];
 }
 
-// export function useHookLS(initial) {
-//    const [state, setState] = useState(
-//      () => JSON.parse(window.localStorage.getItem(KEY)) ?? initial
-//    );
-
-//    useEffect(() => {
-//      window.localStorage.setItem(KEY, JSON.stringify(state));
-//    }, [state]);
-//    return [state, setState];
-//  }
